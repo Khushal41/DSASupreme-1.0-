@@ -1,5 +1,4 @@
 // Binary Search
-
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -43,7 +42,7 @@ int main()
 {
     int arr[] = {2, 4, 6, 8, 10, 12, 16};
     int size = 7;
-    int target = 10;
+    int target = 8;
 
     int indexOftarget = binarySearch(arr, size, target);
 
