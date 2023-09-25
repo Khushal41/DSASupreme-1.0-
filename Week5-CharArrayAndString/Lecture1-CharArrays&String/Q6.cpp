@@ -23,6 +23,6 @@ bool cheakPalindrome(char word[])
 }
 int main()
 {
-    char arr[100] = "BabbaB";
+    char arr[100] = "LoL";
     cout << "Palindrome is : " << cheakPalindrome(arr);
 }
