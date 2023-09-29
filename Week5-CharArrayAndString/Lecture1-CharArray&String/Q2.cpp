@@ -8,6 +8,6 @@ int main()
     // cout << "Your name : " << name << endl;
 
     char name[100];
-    cin.getline(name, 30);
+    cin.getline(name, 30); // delimeter(arr name length)
     cout << "Your name : " << name << endl;
 }
