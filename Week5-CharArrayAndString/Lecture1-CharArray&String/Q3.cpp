@@ -1,4 +1,5 @@
 // WAP to find length of string
+
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -17,6 +18,11 @@ int main()
 {
     char name[100];
     cin >> name;
+
     cout << "Length is : " << getLength(name) << endl;
+
+    // strlen it is pre define function to find length
     cout << "Length is : " << strlen(name) << endl;
+
+    return 0;
 }
