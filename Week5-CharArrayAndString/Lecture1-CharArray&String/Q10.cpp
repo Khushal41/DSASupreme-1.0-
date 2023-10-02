@@ -27,18 +27,18 @@ int main()
     string a = "Love";
     string b = "pove";
 
-    compairString(arr);
-    cout << is_arr<< endl;
+    // compairString(arr);
+    // cout << is_arr<< endl;
 
     // string a = "Love";
     // string b = "love";
     // if (a.compare(b) == 0)
     // {
-    //     cout << "a and b are exactlly same string " << endl;
+    //     cout << "a and b are exactlly same string" << endl;
     // }
     // else
     // {
-    //     cout << "a and b are not same " << endl;
+    //     cout << "a and b are not same" << endl;
     // }
 
     return 0;

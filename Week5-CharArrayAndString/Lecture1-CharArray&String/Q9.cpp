@@ -13,13 +13,14 @@ int main()
 
     cout << "Length is :" << str.length() << endl;
     cout << "isEmpty :" << str.empty() << endl;
+    
     str.push_back('A');
     cout << str << endl;
     str.pop_back();
+
+    // NOte:- string ke andar sustring nikalni hogi tab substr function use hoga 
     cout << str << endl;
     cout << str.substr(0, 6) << endl; //
-
-   
 
     return 0;
 }
