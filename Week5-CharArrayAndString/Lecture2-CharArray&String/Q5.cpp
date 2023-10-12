@@ -6,7 +6,7 @@ public:
     int expandAroundIndex(string s, int left, int right)
     {
         int count = 0;
-        // jab tak match karega, tab tak count increment kardo and i piche and j aaage kardo
+        // jab tak match karega,   tab tak count increment kardo and i piche and j aaage kardo
         while (left >= 0 && right < s.length() && s[left] == s[right])
         {
             count++;
