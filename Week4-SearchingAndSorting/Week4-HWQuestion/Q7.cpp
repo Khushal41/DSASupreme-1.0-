@@ -11,14 +11,14 @@
 
 // The second line of input contains N space-separated positive integers less than 1 000 000 000, the heights of each tree (in metres). The sum of all heights will exceed M, thus Mirko will always be able to obtain the required amount of wood.
 
-// Example 
+// Example
 // Input : 4 7 20 15 10 17
 //     Output : 15
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
-    using namespace std;
+using namespace std;
 bool isPossibleSolution(vector<long long int> trees, long long int m, long long int mid)
 {
     long long int woodCollect = 0;
@@ -48,7 +48,7 @@ long long int maxSawBladeHeight(vector<long long int> tress, long long int m)
             end = mid - 1;
         }
     }
-        return ans;
+    return ans;
 }
 int main()
 {
