@@ -37,21 +37,17 @@ int main()
 
     // BAD PRACTICE
     //  int* ptr;
+    // cout << *ptr << endl; // Segmentation fault [run-time]
 
-    // cout << *ptr << endl;
-
-    // NULL POINTER
+    // NULL POINTER[Not exist location]
     //  int* ptr = 0;
-
-    // cout << *ptr << endl;
+    // cout << *ptr << endl; 
 
     // int a = 5;
-
     // int* ptr = &a;
 
     // //copy pointer
     // int* dusraPtr = ptr;
-
     // cout << *ptr << endl;
     // cout << *dusraPtr << endl;
 
