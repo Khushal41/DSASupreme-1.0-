@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-bool cheakPalindrome(char word[])
+bool cheakPalindrome(char word[]) 
 {
     int i = 0;
     int n = strlen(word);
@@ -23,6 +23,6 @@ bool cheakPalindrome(char word[])
 }
 int main()
 {
-    char arr[100] = "LoL";
+    char arr[100] = "Khushal";
     cout << "Palindrome is : " << cheakPalindrome(arr);
 }

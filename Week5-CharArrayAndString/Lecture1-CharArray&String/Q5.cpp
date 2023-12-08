@@ -11,14 +11,14 @@ void replaceSpaces(char sentence[])
     {
         if (sentence[i] == ' ')
         {
-            sentence[i] = '#';
+            sentence[i] = '@';
         }
     }
 }
 int main()
 {
     char sentence[100];
-    cin.getline(sentence, 100);
+    cin.getline(sentence, 100); //(arr name,size)
 
     replaceSpaces(sentence);
     cout << "Printing sentence : " << endl

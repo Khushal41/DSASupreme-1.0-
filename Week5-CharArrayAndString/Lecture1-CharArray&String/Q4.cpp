@@ -13,14 +13,14 @@ int getLength(char name[])
     }
     return length;
 }
-int reverseCharArray(char name[])
+void reverseCharArray(char name[])
 {
     int i = 0;
     int n = getLength(name);
     int j = n - 1;
 
-    while (i <= j) 
-     // stop condition i Greater than j
+    while (i <= j)
+    // stop condition i Greater than j
     {
         swap(name[i], name[j]);
         i++;
@@ -31,10 +31,10 @@ int main()
 {
     char name[100];
     cin >> name;
-   
+
     cout << "Length is : " << getLength(name) << endl;
 
-    cout << "Length is : " << strlen(name) << endl;
+    // cout << "Length is : " << strlen(name) << endl;
 
     cout << " Initially : " << name << endl;
 

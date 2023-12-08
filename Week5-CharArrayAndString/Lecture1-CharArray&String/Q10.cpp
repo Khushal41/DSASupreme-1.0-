@@ -5,7 +5,6 @@ bool compairString(string a, string b)
 {
     if (a.length() != b.length())
     {
-        /* code */
         return false;
     }
     else
@@ -27,8 +26,10 @@ int main()
     string a = "Love";
     string b = "pove";
 
-    // compairString(arr);
+    compairString(arr);
     // cout << is_arr<< endl;
+
+// ==============================================
 
     // string a = "Love";
     // string b = "love";

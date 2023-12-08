@@ -24,6 +24,6 @@ void covertIntoUpperCase(char arr[])
 int main()
 {
     char arr[100] = "babbar";
-    covertIntoUpperCase(arr);
+    covertIntoUpperCase(arr); // fuction call
     cout << arr << endl;
 }
