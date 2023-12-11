@@ -33,6 +33,6 @@ public:
                 j--;
             }
         }
-        return true;
+        return true; // zero removal condition
     }
 };
