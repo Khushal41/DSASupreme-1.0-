@@ -3,12 +3,13 @@
 #include <vector>
 #include <map>
 using namespace std;
-
+// ========= Custum Comparator =========
+// Case 1:-
 bool cmp(char first, char second)
 {
-        return first > second;
+        return first > second; // Array sort in decending order [rbbaa]
 }
-
+// Case 2:-
 bool compare(int a, int b)
 {
         cout << "First number is: " << a;
@@ -19,11 +20,15 @@ bool compare(int a, int b)
 
 int main()
 {
+        // ===== Custum Comparator ======
+        //  Case 1 :-
         // string s = "babbar";
         // sort(s.begin(), s.end(), cmp);
 
+        // Case 2 :-
         // vector<int> v{5, 3, 1, 2, 4};
-        // sort(v.begin(), v.end(), compare);
+        // sort(v.begin(), v.end(), compare); // accending order
+
         // for (auto i : v)
         // {
         //         cout << i << " ";
@@ -34,7 +39,7 @@ int main()
 
         // cout << s << endl;
 
-        // creation of map
+        // ===== creation of map ======
         map<int, char> meraMap;
         // insertion
         meraMap[0] = 'a';
