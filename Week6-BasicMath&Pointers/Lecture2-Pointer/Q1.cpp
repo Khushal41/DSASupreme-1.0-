@@ -26,19 +26,22 @@ int main()
     // cout << *(arr + 2) << endl;
     // // Next index value
     // cout << arr[2] << endl;
-    // cout << *(arr + 3) << endl;
+    // cout << *(arr + 3) << endl; // 18
     // cout << arr[3] << endl;
 
     // Part 3 :-
-    int i = 0;
-    cout << arr[i] << endl; // same 
-    cout << i[arr] << endl; // same
-    cout << *(arr + i) << endl; // same
+    // int i = 0;
+    // These 3 expression are same so the answer in same
+    // cout << arr[i] << endl;     // same
+    // cout << i[arr] << endl;     // same
+    // cout << *(arr + i) << endl; // same
 
-    // // arr = arr + 2;
-
-    // int *p = arr;
-    // p = p + 2;
+    // Part 4 :-
+    // changing base address not possible not possible using array
+    arr = arr + 2; // error
+    // changing base address possible  using pointer
+    int *p = arr;
+    p = p + 2;
 
     return 0;
 }

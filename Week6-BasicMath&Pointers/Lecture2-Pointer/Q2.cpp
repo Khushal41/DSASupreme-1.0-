@@ -4,22 +4,23 @@ int main()
 {
     // Part 1 :-
     // int arr[10];
-    // cout << sizeof(arr) << endl;
+    // cout << sizeof(arr) << endl; // 40
 
     // int *p = arr;
-    // cout << sizeof(p) << endl;
-    // cout << sizeof(*p) << endl;
+    // cout << sizeof(p) << endl; // 8 depend on compiler
+    // cout << sizeof(*p) << endl; // 4 depend on compiler
 
+    // Topic :- Char Array 
     // Part 2 :-
-    // char ch[10] = "Babber";
-    // char *c = ch;
-    // cout << ch << endl;
-    // cout << &ch << endl;
-    // cout << ch[0] << endl;
+    char ch[10] = "Babbar";
+    char *c = ch;
+    cout << ch << endl;
+    cout << &ch << endl;
+    cout << ch[0] << endl;
 
-    // cout << c << endl;
-    // cout << &c << endl;
-    // cout << *c << endl;
+    cout << c << endl;
+    cout << &c << endl;
+    cout << *c << endl;
 
     // Part 3 :-
     // char name[9] = "SherBano";
