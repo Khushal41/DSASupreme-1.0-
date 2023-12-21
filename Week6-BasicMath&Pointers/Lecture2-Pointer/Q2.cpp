@@ -10,17 +10,17 @@ int main()
     // cout << sizeof(p) << endl; // 8 depend on compiler
     // cout << sizeof(*p) << endl; // 4 depend on compiler
 
-    // Topic :- Char Array 
+    // Topic :- Char Array
     // Part 2 :-
-    char ch[10] = "Babbar";
-    char *c = ch;
-    cout << ch << endl;
-    cout << &ch << endl;
-    cout << ch[0] << endl;
+    // char ch[10] = "Babbar";
+    // char *c = ch;
+    // cout << ch << endl;
+    // cout << &ch << endl;
+    // cout << ch[0] << endl;
 
-    cout << c << endl;
-    cout << &c << endl;
-    cout << *c << endl;
+    // cout << c << endl;
+    // cout << &c << endl;
+    // cout << *c << endl;
 
     // Part 3 :-
     // char name[9] = "SherBano";
@@ -41,11 +41,10 @@ int main()
     // char *cptr = &ch;
     // cout << cptr << endl;
 
-    char ch[10] = "Babber";
-    cout << ch << endl;
-
-    char *c = "babber";
-    cout << c << endl;
+    // char ch[10] = "Babber";
+    // cout << ch << endl;
+    // char *c = "babber";
+    // cout << c << endl;
 
     return 0;
 }

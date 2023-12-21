@@ -38,10 +38,10 @@ int main()
 
     // Part 4 :-
     // changing base address not possible not possible using array
-    arr = arr + 2; // error
+    // arr = arr + 2; // error
     // changing base address possible  using pointer
-    int *p = arr;
-    p = p + 2;
+    // int *p = arr;
+    // p = p + 2;
 
     return 0;
 }
