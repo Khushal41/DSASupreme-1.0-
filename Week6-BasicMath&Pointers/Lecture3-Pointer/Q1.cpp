@@ -6,7 +6,7 @@ int main()
     int *p = &a; // Pointer to integer data
     int **q = &p; // Pointer to pointer data
 
-    cout << &a << endl;
+    cout << &a << endl; 
     cout << a << endl;
     cout << p << endl;
     cout << &p << endl;
