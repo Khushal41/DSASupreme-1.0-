@@ -11,6 +11,10 @@ int findPivot(vector<int> arr)
 
     while (s <= e)
     {
+        // if(s == e) {
+        //     // single element
+        //     return s;
+        // }
         if (mid + 1 < arr.size() && arr[mid] > arr[mid + 1])
             return mid;
 
@@ -21,7 +25,7 @@ int findPivot(vector<int> arr)
         if (arr[s] >= arr[mid])
             e = mid - 1;
         else
-        // Right Part 
+            // Right Part
             s = mid + 1;
 
         mid = s + (e - s) / 2;
@@ -30,7 +34,7 @@ int findPivot(vector<int> arr)
 }
 int main()
 {
-    vector<int> arr{3, 4, 5, 6, 7, 1, 2};
+    vector<int> arr{7, 8, 9, 10, 2, 3, 4, 6};
     int ans = findPivot(arr);
 
     cout << "Pivot Element is : " << arr[ans] << endl;
