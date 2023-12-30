@@ -1,11 +1,17 @@
 // WAP to find facorial
 #include <iostream>
-using namespace std; 
+using namespace std;
 int factorial(int n)
 {
-    cout << "Function call for n : " << n << endl;
-    int ans = n * factorial(n - 1);
-    return ans;
+    // Base Case :- Ruk na kab he 
+    if(n == 1){
+        return 1;
+    }
+    // Recursive Relation
+    int chotiProblemAns = factorial(n - 1);
+    int badiProblemAns = n * chotiProblemAns;
+
+    return badiProblemAns;
 }
 int main()
 {
