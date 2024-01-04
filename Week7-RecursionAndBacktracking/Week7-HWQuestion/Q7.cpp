@@ -1,3 +1,4 @@
+// Print all subarray using recrsion....
 #include <iostream>
 #include <vector>
 using namespace std;
