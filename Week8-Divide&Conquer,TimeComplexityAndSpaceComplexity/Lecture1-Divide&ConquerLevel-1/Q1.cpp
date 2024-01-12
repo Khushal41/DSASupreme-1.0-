@@ -63,7 +63,7 @@ void merge(int *arr, int s, int e)
 }
 void mergeSort(int *arr, int s, int e)
 {
-    // *arr-> Pointer to array pass
+    // arr-> Pointer to array pass
     // Base case
     if (s == e)
         return;
@@ -80,7 +80,7 @@ void mergeSort(int *arr, int s, int e)
 }
 int main()
 {
-    int arr[] = {4,12,5,13,2,12,2,2,2,2,2,2,2};
+    int arr[] = {4, 12, 5, 13, 2, 12, 2, 2, 2, 2, 2, 2, 2};
     int n = 13;
 
     int s = 0;
