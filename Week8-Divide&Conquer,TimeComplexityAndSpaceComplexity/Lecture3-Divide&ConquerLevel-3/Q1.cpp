@@ -38,7 +38,7 @@ void solveMaze(int arr[][4], int row, int col, int i, int j,
         visited[i + 1][j] = true;
         solveMaze(arr, row, col, i + 1, j, visited, path, output + 'D');
         // backtrack
-        visited[i + 1][j] = false;
+        visited[i + 1][j] = false; // to run multiple case
     }
 
     // Left -> i, j-1
@@ -86,6 +86,7 @@ int main()
     int row = 4;
     int col = 4;
 
+    // It create 2d array its dimention is nxm 
     vector<vector<bool>> visited(row, vector<bool>(col, false));
     // src ki value k true mark kredete h
     visited[0][0] = true;

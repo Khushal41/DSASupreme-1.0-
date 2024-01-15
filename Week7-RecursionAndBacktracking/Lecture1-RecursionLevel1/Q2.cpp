@@ -34,7 +34,7 @@ int main()
     cin >> n;
 
     printCounting(n);
-    // cout << endl;
+    cout << endl;
 
     return 0;
 }
