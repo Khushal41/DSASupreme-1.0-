@@ -2,7 +2,7 @@
 #include <iostream>
 #include <limits.h>
 using namespace std;
-// & -> Pass by reference
+// &maxi -> Pass by reference[same memory different name]
 void findMax(int arr[], int n, int i, int &maxi)
 {
     // base case

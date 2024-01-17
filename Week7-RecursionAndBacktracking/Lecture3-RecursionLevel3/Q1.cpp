@@ -16,7 +16,7 @@ bool cheakSorted(vector<int> &arr, int &n, int i)
 }
 int main() 
 {
-    vector<int> v{10, 20, 30, 40, 9};
+    vector<int> v{10, 20, 30, 40};
     int n = v.size();
     int i = 0;
     bool isSorted = cheakSorted(v, n, i);
