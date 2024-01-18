@@ -20,7 +20,7 @@ int solve(vector<int> &arr, int target)
     int mini = INT_MAX;
     for (int i = 0; i < arr.size(); i++)
     {
-        int ans = solve(arr, target - arr[i]); // t(arr,arget - current element)
+        int ans = solve(arr, target - arr[i]); // t(arr,target - current element)
         if (ans != INT_MAX)
 
             // Range ke baharnikal jayga

@@ -10,7 +10,7 @@ int solve(int n, int x, int y, int z)
     if (n == 0)
     {
         return 0;
-    }  
+    }
 
     if (n < 0)
     {
