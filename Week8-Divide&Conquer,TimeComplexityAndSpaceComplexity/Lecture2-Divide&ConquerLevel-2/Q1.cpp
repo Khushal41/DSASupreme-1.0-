@@ -12,15 +12,15 @@ int partition(int arr[], int s, int e)
     {
         if (arr[i] <= pivotElement)
         {
-            count++;
+            count++;  
         }
     }
     // Jab main loop se bahar aaya toh mere pass pivot ki position ka right index ready he
     int rightIndex = s + count;
     swap(arr[pivotIndex], arr[rightIndex]);
-    pivotIndex = rightIndex;
+    pivotIndex = rightIndex; // pivot index update here
 
-    // Step 3 :- left plase small element & Right me big element
+    // Step 3 :- left plase small element & Right me big element place karne he
     int i = s;
     int j = e;
 
@@ -34,9 +34,9 @@ int partition(int arr[], int s, int e)
         {
             j--;
         }
-        // 2 case ho sakte he
-        // 1 first case- You found element to swap
-        // Second case- No need to swap
+        // 2 case ho sakte he ->
+        // 1 first case -> You found element to swap
+        // 2 Second case -> No need to swap
         if (i < pivotIndex && j > pivotIndex)
         {
             swap(arr[i], arr[j]);
@@ -54,7 +54,7 @@ void quickSort(int arr[], int s, int e)
 
     // Pattion Logic , return pivot
     int p = partition(arr, s, e);
-    
+
     // Recursive call
     // pivot -> Left call
     quickSort(arr, s, p - 1);
@@ -63,13 +63,14 @@ void quickSort(int arr[], int s, int e)
 }
 int main()
 {
-    int arr[] = {8, 1, 2, 4, 20, 50, 40, 99, 55};
-    int n = 9;
+    int arr[] = {8, 1, 2, 4, 20, 50, 40, 99, 55, 2};
+    int n = 10;
 
-    int s = 0;
-    int e = n - 1;
+    int s = 0;     // starting inndex
+    int e = n - 1; // ending index
     quickSort(arr, s, e);
 
+    // Answer print
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

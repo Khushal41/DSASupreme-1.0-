@@ -1,6 +1,7 @@
 // Permutation of string 
 #include <iostream>
 using namespace std;
+// By reference string pass 
 void printPermutation(string &str, int i)
 {
     // Base case
@@ -24,7 +25,7 @@ void printPermutation(string &str, int i)
 }
 int main()
 {
-    string str = "abc";
+    string str = "xy";
     int i = 0;
     printPermutation(str, i);
     return 0;

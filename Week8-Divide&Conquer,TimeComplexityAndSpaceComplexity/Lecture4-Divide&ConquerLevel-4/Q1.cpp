@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+// By referencce
 void printSolution(vector<vector<char>> &board, int n)
 {
     for (int i = 0; i < n; i++)
@@ -57,9 +58,9 @@ bool isSafe(int row, int col, vector<vector<char>> &board, int n)
         j--;
     }
 
-    // kahipar queen nahi mili  
-    // iska matlab he ki position safe he 
-    // true return kardo 
+    // kahipar queen nahi mili
+    // iska matlab he ki position safe he
+    // true return kardo
     return true;
 }
 
@@ -71,7 +72,6 @@ void solve(vector<vector<char>> &board, int col, int n)
         printSolution(board, n);
         return;
     }
-    
 
     // 1 case solve
     // Queen ko sare row me place karne ka try kar na he
@@ -88,12 +88,13 @@ void solve(vector<vector<char>> &board, int col, int n)
         }
     }
 }
+
 int main()
 {
-    int n = 4;
+    int n = 8;
     vector<vector<char>> board(n, vector<char>(n, '-'));
     // 0->Empty cell
-    // 1->Value place at empty cell
+    // Q->Value place at empty cell
     int col = 0;
     solve(board, col, n);
     return 0;

@@ -4,29 +4,29 @@ using namespace std;
 void merge(int *arr, int s, int e)
 {
     // Creating 2 sorted array
-    int mid = (s - e) / 2;
+    int mid = (s + e) / 2;
 
     // Length of array 1
-    int leftt = mid - s + 1;
+    int len1 = mid - s + 1;
 
     // Length of array 2
-    int rightt = e - mid;
+    int len2 = e - mid;
 
-    // Ctrating left right 2 array
-    // Create new 2 block of array
-    int *left = new int[leftt];
-    int *right = new int[rightt];
+    // Creating left right 2 array
+    // Create new 2 block of array[address] *left & *right
+    int *left = new int[len1];
+    int *right = new int[len2];
 
     // Copy value
-    int k = s; // starting index
-    for (int i = 0; i < leftt; i++)
+    int k = s; // starting index s index
+    for (int i = 0; i < len1; i++)
     {
         left[i] = arr[k];
         k++;
     }
 
     k = mid + 1; // starting at mid+1 index
-    for (int i = 0; i < rightt; i++)
+    for (int i = 0; i < len2; i++)
     {
         right[i] = arr[k];
         k++;
@@ -38,7 +38,7 @@ void merge(int *arr, int s, int e)
     int mainArrayIndex = s;
 
     // Comparison Logic
-    while (leftIndex < leftt && rightIndex < rightt)
+    while (leftIndex < len1 && rightIndex < len2)
     {
         if (left[leftIndex] < right[rightIndex])
         {
@@ -51,22 +51,23 @@ void merge(int *arr, int s, int e)
     }
     // if 1 array is end Array end logic
     // for left array
-    while (leftIndex < leftt)
+    while (leftIndex < len1)
     {
         arr[mainArrayIndex++] = left[leftIndex++];
     }
     // for Right array
-    while (rightIndex < rightt)
+    while (rightIndex < len2)
     {
         arr[mainArrayIndex++] = right[rightIndex++];
     }
 }
+// Pointer to array -> Pass By reference  in array
 void mergeSort(int *arr, int s, int e)
 {
     // arr-> Pointer to array pass
     // Base case
-    if (s == e)
-        return;
+    // if (s == e)
+    //     return;
     if (s >= e)
         return;
 
@@ -80,8 +81,8 @@ void mergeSort(int *arr, int s, int e)
 }
 int main()
 {
-    int arr[] = {4, 12, 5, 13, 2, 12, 2, 2, 2, 2, 2, 2, 2};
-    int n = 13;
+    int arr[] = {4, 12, 5, 13, 2};
+    int n = 5;
 
     int s = 0;
     int e = n - 1;

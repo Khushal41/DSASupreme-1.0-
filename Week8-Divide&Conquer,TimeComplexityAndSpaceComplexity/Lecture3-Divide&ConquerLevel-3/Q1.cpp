@@ -2,10 +2,9 @@
 #include <vector>
 using namespace std;
 // By Reference
-bool isSafe(int i, int j, int row, int col, int arr[][4],
-            vector<vector<bool>> &visited)
+bool isSafe(int i, int j, int row, int col, int arr[][4], vector<vector<bool>> &visited)
 {
-    // Element inside array && arr ke andar one chahiye && vsited false chahiye -> true
+    // Element inside array && arr ke andar one palce && vsited false chahiye -> true
     if (((i >= 0 && i < row) && (j >= 0 && j < col)) &&
         (arr[i][j] == 1) &&
         (visited[i][j] == false))
@@ -18,11 +17,12 @@ bool isSafe(int i, int j, int row, int col, int arr[][4],
     }
 }
 // vector by reference
+// (arr i/p,arr size,starting position,visited mark,ans store,ans create)
 void solveMaze(int arr[][4], int row, int col, int i, int j,
                vector<vector<bool>> &visited, vector<string> &path, string output)
 {
 
-    // base case
+    // Base case
     if (i == row - 1 && j == col - 1)
     {
         // answer found
@@ -86,7 +86,7 @@ int main()
     int row = 4;
     int col = 4;
 
-    // It create 2d array its dimention is nxm 
+    // It create 2d array its dimention is nxm
     vector<vector<bool>> visited(row, vector<bool>(col, false));
     // src ki value k true mark kredete h
     visited[0][0] = true;
