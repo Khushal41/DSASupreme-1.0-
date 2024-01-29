@@ -1,5 +1,7 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
+// How to create class ?
 class Animal
 {
 private:
@@ -10,7 +12,7 @@ public:
     int age;
     string name; //[type];
 
-    // Default Constructor
+    // Default Constructor :-
     Animal()
     {
         this->weight = 0;
@@ -19,7 +21,8 @@ public:
         cout << "Constructor call " << endl;
     }
 
-    // Parameterised Constructor
+    // Parameterised Constructor:- We have input paramitarised constructor
+
     // Animal(int age)
     // {
     //     this->age = age;
@@ -34,7 +37,7 @@ public:
     //     cout << "Parameterised constructor 2 call " << endl;
     // }
 
-    // // Copy Constructor
+    // Copy Constructor :-
     // Animal(Animal &obj)
     // {
     //     this->age = obj.age;
@@ -68,36 +71,47 @@ public:
     {
         cout << this->age << " " << this->weight << " " << this->name << endl;
     }
-};
+
+    // Distructor :-
+    ~Animal()
+    {
+        cout << "I am inside destructor" << endl;
+    }
+}; // Termination
 int main()
 {
-    // Object creation
+    // Object creation :-
 
-    // Static
+    // 1-> Static Memory Location :-
     // Animal ramesh;
     // ramesh.age = 13;
     // ramesh.name = "Lion";
+
+    // Note :- Agar me kisi "object" ki "property" ko accsess karna chahata hu to me "Dot operator" ka use karunga
+    // ex :-
     // cout << "Age of Ramesh is " << ramesh.age << endl;
     // cout << "Name of Ramesh is " << ramesh.name << endl;
 
+    // Fuction call :-
     // ramesh.eat();
     // ramesh.sleep();
 
-    // // Private memeber ko access kar na  setter and getter
-    // ramesh.setWeight(101);
-    // cout << "Weight" << ramesh.getWeight() << endl;
+    // Note:- Private memeber ko access kar na  "setter" and "getter"
+    //  ramesh.setWeight(101);
+    //  cout << "Weight" << ramesh.getWeight() << endl;
 
-    // // Dynamic Memeory
+    // Dynamic Memeory Allocation :-
     // Animal *suresh = new Animal;
 
-    // // Addess
+    // // *Addess[actual object] ka age ,type
     // (*suresh).age = 14;
     // (*suresh).name = "Lion";
 
-    // // Alternate way - Dynamic memory
+    // Alternate way - Dynamic memory
     // suresh->age = 16;
     // suresh->name = "Elvish";
 
+    // Function call :-
     // suresh->eat();
     // suresh->sleep();
 
@@ -105,33 +119,44 @@ int main()
     // Animal a();
     // Animal *b = new Animal();
 
-    // Parameterised Constructor :-
+    // Parameterised Constructor :- we have input paramerter
     // Animal a(11);
     // Animal *b = new Animal(110);
 
     // Animal a(11);
     // Animal *b = new Animal(110, 120,"Babber");
 
-    // // Copy Constructor
+    // Copy Constructor :-
     // Animal c = a;
 
+    // Animal a;
+    // a.age = 20;
+    // a.setWeight(10);
+    // a.name = "babber";
+
+    // Animal b = a;
+    // cout << "a -> ";
+    // a.print();
+    // cout << "b -> ";
+    // b.print();
+
+    // a.name[0] = 's';
+    // cout << "a -> ";
+    // a.print();
+
+    // cout << "b -> ";
+    // b.print();
+
+    // Distructor :-
+    cout << "a object creation" << endl;
     Animal a;
-    a.age = 20;
-    a.setWeight(10);
-    a.name = "babber";
+    a.age = 5;
 
-    Animal b = a;
-    cout << "a -> ";
-    a.print();
-    cout << "b -> ";
-    b.print();
-
-    a.name[0] = 's';
-    cout << "a -> ";
-    a.print();
-
-    cout << "b -> ";
-    b.print();
+    cout << "b object creation" << endl;
+    Animal *b = new Animal();
+    b->age = 13;
+    // For this we need to call maniually "Distructor" using "delete"
+    delete b;
 
     return 0;
 }
