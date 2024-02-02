@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
-
+// Parent Class
 class Animal
 {
 public:
+    // constrictor call
     Animal()
     {
-        cout << "i am inside animal constructor" << endl;
+        cout << "i am inside Animal constructor" << endl;
     }
     void speak()
     {
@@ -14,6 +15,7 @@ public:
     }
 };
 
+// Child Class
 class Dog : public Animal
 {
 public:
@@ -21,7 +23,8 @@ public:
     {
         cout << "i am inside Dog constructor" << endl;
     }
-    // override
+
+    // Function override
     void speak()
     {
         cout << "barking" << endl;
@@ -30,24 +33,37 @@ public:
 
 int main()
 {
-    //   Dog a;
-    //   a.speak(); // barking
+    // Animal a;
+    // a.speak(); // speaking
+
+    // Dog a; // odject a
+    // a.speak(); // barking
+
+    // Dynamic Object Creation :-
 
     // Animal* a = new Animal();
-    // a->speak(); // speaking
+    // a->speak(); // speaking [Speak Method Call]
 
     // Dog* a = new Dog();
-    // a->speak(); // barking
+    // a->speak(); // barking[Dog speack method call]
 
     // UpCasting :-
-    //  Animal* a = new Dog();
-    //  a->speak(); // It depend on run yime
+    // In upkastiting we write "Vertual" key word in parent function
+    // Animal *a = new Dog();
+    // a->speak(); // It depend on run yime
 
-    //DownCasting
-    // Dog* b = (Dog* )new Animal();
-    // b->speak();
+    // DownCasting :-
+    // Dog *b = (Dog *)new Animal();
+    // b->speak(); // barking
 
-    // Dog *a = (Dog *)new Animal();
+    // Animal* a = new Animal(); // -> call only animal constructor
+
+    // Dog *a = new Dog(); // Fisrt call animal and then dog constructor
+
+    // Animal *a = new Dog(); // Fisrt call animal and then dog constructor
+
+    // Dog *a = (Dog *)new Animal(); // Animal constructor call
+     
     // Dog a;
 
     return 0;
