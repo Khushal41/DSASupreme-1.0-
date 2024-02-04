@@ -1,4 +1,4 @@
-// Q->Sort An Array [912-leetcode]
+// Q-> Sort An Array [912-leetcode]
 // Given an array of integers nums, sort the array in ascending order and return it.
 
 // You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
