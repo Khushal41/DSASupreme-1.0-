@@ -10,7 +10,7 @@ private:
 public:
     // state or properties
     int age;
-    string name; //[type];
+    string name; // [type];
 
     // Default Constructor :-
     Animal()
