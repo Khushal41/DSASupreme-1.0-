@@ -1,13 +1,12 @@
-#include <iostream>
-// #include <string.h>
-using namespace std;
 // Inheritance Example :-
 // 4 -> Hierachical Inheritance :-
+#include <iostream>
+using namespace std;
 // Parent Class :-
 class Car
 {
 public:
-    int age; 
+    int age;
     int weight;
     string name;
     void speedUp()
@@ -15,7 +14,7 @@ public:
         cout << "Speed Up" << endl;
     }
 };
-// Child Class :-
+// Create 2 Child Class :-
 class Scorpio : public Car
 {
 };

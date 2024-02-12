@@ -1,6 +1,8 @@
+// Polymorphism :-
+// 2-> Runtime Polymorphisum :-
 #include <iostream>
 using namespace std;
-// Parent Class
+// Parent Class :-
 class Animal
 {
 public:
@@ -9,13 +11,14 @@ public:
     {
         cout << "i am inside Animal constructor" << endl;
     }
+
     void speak()
     {
         cout << "Speaking " << endl;
     }
 };
 
-// Child Class
+// Child Class :-
 class Dog : public Animal
 {
 public:
@@ -27,7 +30,7 @@ public:
     // Function override
     void speak()
     {
-        cout << "barking" << endl;
+        cout << "Barking" << endl;
     }
 };
 
@@ -40,7 +43,6 @@ int main()
     // a.speak(); // barking
 
     // Dynamic Object Creation :-
-
     // Animal* a = new Animal();
     // a->speak(); // speaking [Speak Method Call]
 
@@ -63,7 +65,7 @@ int main()
     // Animal *a = new Dog(); // Fisrt call animal and then dog constructor
 
     // Dog *a = (Dog *)new Animal(); // Animal constructor call
-     
+
     // Dog a;
 
     return 0;

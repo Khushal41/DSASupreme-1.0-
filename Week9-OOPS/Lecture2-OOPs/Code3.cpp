@@ -10,6 +10,7 @@ public:
     string ans;
     int weight;
     int age;
+
     void speedUp()
     {
         cout << "Speed Up" << endl;
@@ -19,9 +20,14 @@ public:
         cout << "Break Mardi" << endl;
     }
 };
+
 // Child Class :-
 class Scorpio : public Car
 {
+    // Scorpio is a car 
+    // Dog is a animal
+    // Male is human 
+    // Scorpio class inheriet car class
 };
 int main()
 {

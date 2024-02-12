@@ -17,7 +17,7 @@ public:
     {
         this->weight = 0;
         this->age = 0;
-        this->name = "";
+        this->name = ""; // Garbage value
         cout << "Constructor call " << endl;
     }
 
@@ -78,10 +78,10 @@ public:
         cout << "I am inside destructor" << endl;
     }
 }; // Termination
+
 int main()
 {
     // Object creation :-
-
     // 1-> Static Memory Location :-
     // Animal ramesh;
     // ramesh.age = 13;
@@ -92,15 +92,15 @@ int main()
     // cout << "Age of Ramesh is " << ramesh.age << endl;
     // cout << "Name of Ramesh is " << ramesh.name << endl;
 
-    // Fuction call :-
+    // // Fuction call :-
     // ramesh.eat();
     // ramesh.sleep();
 
     // Note:- Private memeber ko access kar na  "setter" and "getter"
-    //  ramesh.setWeight(101);
-    //  cout << "Weight" << ramesh.getWeight() << endl;
+    // ramesh.setWeight(101); // waight set
+    // cout << "Weight " << ramesh.getWeight() << endl;
 
-    // Dynamic Memeory Allocation :-
+    // 2-> Dynamic Memeory Allocation :-
     // Animal *suresh = new Animal;
 
     // // *Addess[actual object] ka age ,type
@@ -111,13 +111,13 @@ int main()
     // suresh->age = 16;
     // suresh->name = "Elvish";
 
-    // Function call :-
+    // Function call :- 
     // suresh->eat();
     // suresh->sleep();
 
     // constructor call :-
-    // Animal a();
-    // Animal *b = new Animal();
+    // Animal a(); // static
+    // Animal *b = new Animal(); // Dynamic
 
     // Parameterised Constructor :- we have input paramerter
     // Animal a(11);
@@ -128,11 +128,12 @@ int main()
 
     // Copy Constructor :-
     // Animal c = a;
+    // Animal c(a);
 
     // Animal a;
     // a.age = 20;
     // a.setWeight(10);
-    // a.name = "babber";
+    // a.name = "babber"; // type
 
     // Animal b = a;
     // cout << "a -> ";
@@ -148,10 +149,11 @@ int main()
     // b.print();
 
     // Distructor :-
+    // 1->Static 
     cout << "a object creation" << endl;
     Animal a;
     a.age = 5;
-
+    // 2->Heap 
     cout << "b object creation" << endl;
     Animal *b = new Animal();
     b->age = 13;

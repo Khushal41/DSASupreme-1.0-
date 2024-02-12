@@ -1,11 +1,9 @@
 #include <iostream>
-// #include <string.h>
 using namespace std;
 // Inheritance Example :-
-// Inisde animal class 
+// Code called Inisde animal class  :-
 class Animal
 {
-    // private:
 public:
     int age;
     // int weight;
@@ -17,7 +15,7 @@ public:
     //     }
 };
 // Mode of inheritance
-// Inside Dog Class 
+// Code called Inside Dog Class :
 class Dog : private Animal
 {
 public:
@@ -29,11 +27,13 @@ public:
 
 int main()
 {
-    // Inside And Outside Animal class
+    // Below code called Inside And Outside Animal class :-
     Dog d1;
-    // d1.eat();
-    // cout << d1.age; // access outside
-    d1.print(); // acsess inside
+    // d1.eat(); // class Dog : public Animal
+
+    // cout << d1.age; // access outside [public member]
+
+    // d1.print(); // acsess inside [private memeber]
 
     return 0;
 }

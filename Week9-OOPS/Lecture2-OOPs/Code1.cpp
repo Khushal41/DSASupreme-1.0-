@@ -4,6 +4,7 @@ using namespace std;
 class Animal
 {
 private:
+    // Data :-
     int age;
     int weight;
 
@@ -12,6 +13,7 @@ public:
     {
         cout << "Eating" << endl;
     }
+    // To acces private data :- get & set
     int getAge()
     {
         return this->age;

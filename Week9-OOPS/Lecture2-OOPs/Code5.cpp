@@ -1,8 +1,8 @@
+// Inheritance Example :-
+// 1 -> Multiple Inheritance :-
 #include <iostream>
 #include <string.h>
 using namespace std;
-// Inheritance Example :-
-// 1 -> Multiple Inheritance :-
 // Parent Class :-
 class A
 {
@@ -16,14 +16,15 @@ public:
     int chemistry;
 };
 class C : public A, public B
+// Class a & b inherit by calss c 
 {
 public:
-    int maths;
+    int math;
 }; 
 int main() 
 {
     C obj;
-    cout << obj.physics << " " << obj.chemistry << " " obj.maths << endl;
+    cout << obj.physics << " " << obj.chemistry << " " << obj.math << endl;
 
     return 0;
 }

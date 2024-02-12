@@ -1,28 +1,32 @@
-#include <iostream>
-// #include <string.h>
-using namespace std;
-// Inheritance Example :-
+// Inheritance Example : -
 // 2 -> Multilevel Inheritance :-
-// Parent Class :-
+
+#include <iostream>
+using namespace std;
+// 1-> Parent Class :-
 class Fruit
 {
 public:
     string name;
 };
-// Child Class :-
+
+// 2-> Child Class :-
 class Mango : public Fruit
 {
 public:
     int weight;
 };
+
+// 3-> Ground Child :-
 class Alphanso : public Mango
 {
 public:
     int sugerLevel;
 };
+
 int main()
 {
-    Alphanso a; 
+    Alphanso a;
     cout << a.name << " " << a.weight << " " << a.sugerLevel << endl;
 
     return 0;
