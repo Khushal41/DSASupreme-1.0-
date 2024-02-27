@@ -1,4 +1,4 @@
-// middle element
+// Middle element
 #include <iostream>
 #include <stack>
 using namespace std;
