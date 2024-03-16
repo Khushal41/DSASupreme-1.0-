@@ -1,3 +1,4 @@
+// Insert At Position 
 #include <iostream>
 using namespace std;
 class Node
@@ -16,7 +17,7 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    // TODO: Write a destrcutor to delete a node
+    // // TODO: Write a destrcutor to delete a node 
     ~Node()
     {
         // write your code here
@@ -106,7 +107,7 @@ void inserAtPosition(int data, int position, Node *&head, Node *&tail)
         return;
     }
     // Step 1:-find prev & curr
-    int i = 1;
+    int i = 1; 
     Node *prev = head;
     while (i < position)
     {
@@ -189,27 +190,27 @@ int main()
     Node *tail = NULL;
 
     insertAtHead(head, tail, 20);
-    insertAtHead(head, tail, 40);
     insertAtHead(head, tail, 50);
-    insertAtHead(head, tail, 100);
+    insertAtHead(head, tail, 60);
+    insertAtHead(head, tail, 90);
     insertAtTail(head, tail, 77);
 
     print(head);
     cout << endl;
-    // cout << "head :" << head->data << endl;
-    // cout << "tail :" << tail->data << endl;
+    cout << "head :" << head->data << endl;
+    cout << "tail :" << tail->data << endl;
 
-    // inserAtPosition(106, 6, head, tail);
-    // cout << "Printing after insert at position call" << endl;
-    // print(head);
-    // cout << endl;
-    // cout << "head :" << head->data << endl;
-    // cout << "tail :" << tail->data << endl;
-
-    deleteNode(1, head, tail);
-    cout << endl;
+    inserAtPosition(106, 0, head, tail);
+    cout << "Printing after insert at position call" << endl;
     print(head);
     cout << endl;
+    cout << "head :" << head->data << endl;
+    cout << "tail :" << tail->data << endl;
+
+    // deleteNode(1, head, tail);
+    // cout << endl;
+    // print(head);
+    // cout << endl;
 
     return 0;
 }

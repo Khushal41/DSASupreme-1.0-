@@ -1,3 +1,4 @@
+// Singly LL Code example
 #include <iostream>
 using namespace std;
 class Node
@@ -5,21 +6,23 @@ class Node
 public:
     int data;
     Node *next;
-
+    // Constructor Create :-
     Node()
     {
         this->data = 0;
         this->next = NULL;
     }
+    // Constructor Create :-
     Node(int data)
     {
         this->data = data;
         this->next = NULL;
     }
 };
+// Print Function :-
 void print(Node *head)
 {
-    Node *temp = head;
+    Node *temp = head; // pointer create
     while (temp != NULL) // till go tu NULL
     {
         cout << temp->data << " "; // data print
