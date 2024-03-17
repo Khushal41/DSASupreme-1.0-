@@ -1,4 +1,4 @@
-//Doubly Linked List
+// Doubly Linked List [Deletion]
 #include <iostream>
 using namespace std;
 
@@ -51,92 +51,6 @@ int getLength(Node *head)
     }
     return len;
 }
-// Insert At Head :-
-void insertAtHead(Node *&head, Node *&tail, int data)
-{
-    if (head == NULL)
-    {
-        // LL is empty case
-        Node *newNode = new Node(data);
-        head = newNode;
-        tail = newNode;
-    }
-    else
-    {
-        // LL is non-empty case
-        // step1: create a node
-        Node *newNode = new Node(data);
-        // step2:
-        newNode->next = head;
-        // step3:
-        head->prev = newNode;
-        // step4;
-        head = newNode;
-    }
-}
-void insertAtTail(Node *&head, Node *&tail, int data)
-{
-
-    if (head == NULL)
-    {
-        // LL is empty
-        Node *newNode = new Node(data);
-        head = newNode;
-        tail = newNode;
-    }
-    else
-    {
-        // LL is not empty
-        Node *newNode = new Node(data);
-        tail->next = newNode;
-        newNode->prev = tail;
-        tail = newNode;
-    }
-}
-
-void insertAtPosition(Node *&head, Node *&tail, int data, int position)
-{
-    if (head == NULL)
-    {
-        Node *newNode = new Node(data);
-        head = newNode;
-        tail = newNode;
-    }
-    else
-    {
-        // LL is not empty
-        if (position == 1)
-        {
-            insertAtHead(head, tail, data);
-            return;
-        }
-        int len = getLength(head);
-        if (position > len)
-        {
-            insertAtTail(head, tail, data);
-            return;
-        }
-        // insertion in middle
-        // step1: find prev && curr
-        int i = 1;
-        Node *prevNode = head;
-        while (i < position - 1)
-        {
-            prevNode = prevNode->next;
-            i++;
-        }
-        Node *curr = prevNode->next;
-
-        // step2: create a node
-        Node *newNode = new Node(data);
-
-        // step3:
-        newNode->prev = prevNode;
-        prevNode->next = newNode;
-        newNode->next = curr;
-        curr->prev = newNode;
-    }
-}
 
 void deleteFromPos(Node *&head, Node *&tail, int position)
 {
@@ -147,13 +61,14 @@ void deleteFromPos(Node *&head, Node *&tail, int position)
     }
     if (head->next == NULL)
     {
-        // single node
+        // single node case
         Node *temp = head;
         head = NULL;
         tail = NULL;
         delete temp;
         return;
     }
+
     int len = getLength(head);
     if (position > len)
     {
@@ -163,7 +78,7 @@ void deleteFromPos(Node *&head, Node *&tail, int position)
 
     if (position == 1)
     {
-        // want to delete the first node
+        // want to delete the first node case
         Node *temp = head;
         head = head->next;
         head->prev = NULL;
@@ -224,27 +139,7 @@ int main()
     // print(first);
     // cout << endl;
 
-    insertAtHead(head, tail, 101);
-
-    // cout << endl;
-    // print(head);
-
-    // cout << endl;
-
-    insertAtTail(head, tail, 501);
-
-    // cout << endl;
-    // print(head);
-
-    // cout << endl;
-
-    insertAtPosition(head, tail, 401, 3);
-
-    cout << endl;
-    print(head);
-    cout << endl;
-
-    deleteFromPos(head, tail, 10);
+    deleteFromPos(head, tail, 1);
 
     cout << endl;
     print(head);

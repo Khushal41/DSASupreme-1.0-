@@ -1,4 +1,4 @@
-//Doubly Linked List
+// Doubly Linked List [Insert At Position]
 #include <iostream>
 using namespace std;
 
@@ -93,7 +93,6 @@ void insertAtTail(Node *&head, Node *&tail, int data)
         tail = newNode;
     }
 }
-
 void insertAtPosition(Node *&head, Node *&tail, int data, int position)
 {
     if (head == NULL)
@@ -111,6 +110,7 @@ void insertAtPosition(Node *&head, Node *&tail, int data, int position)
             return;
         }
         int len = getLength(head);
+        // Position badi he 
         if (position > len)
         {
             insertAtTail(head, tail, data);
@@ -138,74 +138,6 @@ void insertAtPosition(Node *&head, Node *&tail, int data, int position)
     }
 }
 
-void deleteFromPos(Node *&head, Node *&tail, int position)
-{
-    if (head == NULL)
-    {
-        cout << "Linked list is empty";
-        return;
-    }
-    if (head->next == NULL)
-    {
-        // single node
-        Node *temp = head;
-        head = NULL;
-        tail = NULL;
-        delete temp;
-        return;
-    }
-    int len = getLength(head);
-    if (position > len)
-    {
-        cout << "please enter a valid position " << endl;
-        return;
-    }
-
-    if (position == 1)
-    {
-        // want to delete the first node
-        Node *temp = head;
-        head = head->next;
-        head->prev = NULL;
-        temp->next = NULL;
-        delete temp;
-        return;
-    }
-
-    if (position == len)
-    {
-        // delete last node
-        Node *temp = tail;
-        tail = tail->prev;
-        temp->prev = NULL;
-        tail->next = NULL;
-        delete temp;
-        return;
-    }
-
-    // delete from middle of linked list
-
-    // step1: find left, curr, right
-    int i = 1;
-    Node *left = head;
-    while (i < position - 1)
-    {
-        left = left->next;
-        i++;
-    }
-    Node *curr = left->next;
-    Node *right = curr->next;
-
-    // step2:
-    left->next = right;
-    // step3:
-    right->prev = left;
-    // step4:
-    curr->next = NULL;
-    curr->prev = NULL;
-    delete curr;
-}
-
 int main()
 {
 
@@ -226,25 +158,19 @@ int main()
 
     insertAtHead(head, tail, 101);
 
-    // cout << endl;
-    // print(head);
+    cout << endl;
+    print(head);
 
-    // cout << endl;
+    cout << endl;
 
     insertAtTail(head, tail, 501);
 
-    // cout << endl;
-    // print(head);
-
-    // cout << endl;
-
-    insertAtPosition(head, tail, 401, 3);
-
     cout << endl;
     print(head);
+
     cout << endl;
 
-    deleteFromPos(head, tail, 10);
+    insertAtPosition(head, tail, 401, 3);
 
     cout << endl;
     print(head);
