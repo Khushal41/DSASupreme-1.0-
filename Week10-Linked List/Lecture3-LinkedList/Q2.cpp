@@ -1,3 +1,4 @@
+// Reverse Linked List By K
 #include <iostream>
 using namespace std;
 class Node
@@ -16,7 +17,7 @@ public:
 void print(Node *head)
 {
     Node *temp = head;
-    while (temp != NULL)
+    while (temp != NULL) 
     {
         cout << temp->data << " ";
         temp = temp->next;

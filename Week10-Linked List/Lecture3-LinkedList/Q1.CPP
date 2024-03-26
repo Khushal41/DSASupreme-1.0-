@@ -1,3 +1,4 @@
+// Find middle of linked list
 #include <iostream>
 using namespace std;
 class Node
@@ -36,17 +37,18 @@ Node *getMiddle(Node *&head)
         // ONLY 1 NODE
         return head;
     }
-    // LL have > 1node
+    // LL have > 1 node[grater than 1 node]
     Node *slow = head;
-    Node *fast = head->next;
+    Node *fast = head->next; // for 30 answer
+    Node *fast = head;       // for 40 answer
 
     while (slow != NULL && fast != NULL)
     {
-        fast = fast->next;
+        fast = fast->next; // fast 1 step
         if (fast != NULL)
         {
-            fast = fast->next;
-            slow = slow->next;
+            fast = fast->next; // fast 1 step after is not null
+            slow = slow->next; // 1 step
         }
     }
     return slow;
@@ -66,7 +68,7 @@ int main()
     fifth->next = NULL;
 
     print(head);
-    cout << "Middle Node is :" << getMiddle(head)->data << endl;
+    cout << "Middle Node is : " << getMiddle(head)->data << endl;
 
     return 0;
 }

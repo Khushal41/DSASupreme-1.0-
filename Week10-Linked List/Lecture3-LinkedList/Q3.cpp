@@ -1,3 +1,4 @@
+// Detect And Delete Group 
 #include <iostream>
 using namespace std;
 class Node
@@ -159,11 +160,13 @@ Node *startingPointLoop(Node *&head)
             break;
         }
     }
+    // They not meet 
     while (slow != head)
     {
         slow = slow->next;
         fast = fast->next;
     }
+    // IF they meet 
     return slow;
 }
 
