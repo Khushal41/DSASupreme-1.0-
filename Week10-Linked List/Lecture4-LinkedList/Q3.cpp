@@ -42,7 +42,8 @@ void sortZeroOneTwo(Node *&head)
             two++;
         temp = temp->next;
     }
-    // Step 2:- Fill 0,1,2,in original array
+
+    // Step 2:- Fill 0, 1, 2 in original array
     temp = head;
     // fill zero
     while (zero--)
@@ -62,7 +63,7 @@ void sortZeroOneTwo(Node *&head)
         temp->data = 2;
         temp = temp->next;
     }
-}; 
+};
 int main()
 {
     Node *head = new Node(0);

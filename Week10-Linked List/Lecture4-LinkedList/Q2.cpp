@@ -13,7 +13,7 @@ public:
         this->next = NULL;
     }
 };
- 
+
 void print(Node *head)
 {
     Node *temp = head;
@@ -38,7 +38,7 @@ void removeDuplicates(Node *&haed)
         return;
     }
 
-    // >1 node in LL :-
+    // Grater than  1 node in LL :-
     Node *curr = haed;
     while (curr != NULL)
     {

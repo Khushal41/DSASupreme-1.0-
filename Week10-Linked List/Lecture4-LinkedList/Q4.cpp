@@ -25,48 +25,48 @@ void print(Node *head)
     cout << endl;
 }
 
-void sortZeroOneTwo(Node *&head)
-{
-    // step1: find count of zeroes, ones and twos
-    int zero = 0;
-    int one = 0;
-    int two = 0;
+// void sortZeroOneTwo(Node *&head)
+// {
+//     // step1: find count of zeroes, ones and twos
+//     int zero = 0;
+//     int one = 0;
+//     int two = 0;
 
-    Node *temp = head;
-    while (temp != NULL)
-    {
-        if (temp->data == 0)
-            zero++;
-        else if (temp->data == 1)
-            one++;
-        else if (temp->data == 2)
-            two++;
-        temp = temp->next;
-    }
+//     Node *temp = head;
+//     while (temp != NULL)
+//     {
+//         if (temp->data == 0)
+//             zero++;
+//         else if (temp->data == 1)
+//             one++;
+//         else if (temp->data == 2)
+//             two++;
+//         temp = temp->next;
+//     }
 
-    // step2: fill 0, 1 and 2s in the original ll
-    temp = head;
-    // fill zeroes
-    while (zero--)
-    {
-        temp->data = 0;
-        temp = temp->next;
-    }
+//     // step2: fill 0, 1 and 2s in the original ll
+//     temp = head;
+//     // fill zeroes
+//     while (zero--)
+//     {
+//         temp->data = 0;
+//         temp = temp->next;
+//     }
 
-    // fill ones
-    while (one--)
-    {
-        temp->data = 1;
-        temp = temp->next;
-    }
+//     // fill ones
+//     while (one--)
+//     {
+//         temp->data = 1;
+//         temp = temp->next;
+//     }
 
-    // fill 2s
-    while (two--)
-    {
-        temp->data = 2;
-        temp = temp->next;
-    }
-}
+//     // fill 2s
+//     while (two--)
+//     {
+//         temp->data = 2;
+//         temp = temp->next;
+//     }
+// }
 
 Node *sort2(Node *&head)
 {
@@ -81,7 +81,7 @@ Node *sort2(Node *&head)
         return head;
     }
 
-    // create dummy nodes
+    // 1-> create dummy nodes
     Node *zeroHead = new Node(-101);
     Node *zeroTail = zeroHead;
 
@@ -91,7 +91,7 @@ Node *sort2(Node *&head)
     Node *twoHead = new Node(-101);
     Node *twoTail = twoHead;
 
-    // traverse the original LL
+    // 2-> traverse the original LL
     Node *curr = head;
     while (curr != NULL)
     {
@@ -135,7 +135,7 @@ Node *sort2(Node *&head)
 
     // 1-> join them
     // remove dummmy nodes
-    // modify one wali list[oneDummy nOde]
+    // modify one wali list[oneDummy Node]
     Node *temp = oneHead;
     oneHead = oneHead->next;
     temp->next = NULL;
@@ -147,7 +147,7 @@ Node *sort2(Node *&head)
     temp->next = NULL;
     delete temp;
 
-    // join list
+    // join list :-
     if (oneHead != NULL)
     {
         // one wali list is non empty

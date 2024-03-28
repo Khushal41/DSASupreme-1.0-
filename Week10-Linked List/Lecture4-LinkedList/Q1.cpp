@@ -13,7 +13,7 @@ public:
         this->next = NULL;
     }
 };
-// Reverse LL
+// Reverse LL :-
 Node *reverse(Node *head)
 {
     Node *prev = NULL;
@@ -26,6 +26,7 @@ Node *reverse(Node *head)
         prev = curr;
         curr = next;
     }
+    // return LL head
     return prev;
 };
 
@@ -41,7 +42,7 @@ bool cheakPalindrome(Node *head)
         // ONLY ONE NODE
         return true;
     }
-    // >1 Node in LL :-
+    // Grather than 1 Node in LL :-
     // Step A:- Find the middle Node
     Node *slow = head;
     Node *fast = head->next;
@@ -80,6 +81,7 @@ bool cheakPalindrome(Node *head)
             temp2 = temp2->next;
         }
     }
+    // if palindrome return true 
     return true;
 };
 int main()
