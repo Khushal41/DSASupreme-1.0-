@@ -13,7 +13,7 @@ void printMiddle(stack<int> &s, int &totalSize)
     // Base case
     if (s.size() == totalSize / 2 + 1)
     {
-        cout << "Middle element is :" << s.top() << endl;
+        cout << "Middle element is : " << s.top() << endl;
         return;
     }
 

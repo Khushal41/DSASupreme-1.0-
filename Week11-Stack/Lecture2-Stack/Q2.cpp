@@ -34,6 +34,7 @@ void reverseStack(stack<int> &s)
 
     // reverse stack
     reverseStack(s);
+
     // insert at bottom target ko
     insertAtBottom(s, target);
 }
@@ -46,14 +47,6 @@ int main()
     s.push(30);
     s.push(40);
     s.push(50);
-
-    // cout << "Printing" << endl;
-    // while (!s.empty())
-    // {
-    //     cout << s.top() << " ";
-    //     s.pop();
-    // }
-    // cout << endl                                                                                                                                                ;
 
     reverseStack(s);
 

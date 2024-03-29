@@ -1,3 +1,4 @@
+// two stack in an array 
 #include <iostream>
 using namespace std;
 
@@ -121,19 +122,19 @@ int main()
     s.pop1();
     s.print();
 
-    s.pop1();
-    s.print();
+    // s.pop1();
+    // s.print();
 
-    s.pop1();
-    s.print();
+    // s.pop1();
+    // s.print();
 
-    s.pop1();
-    s.print();
+    // s.pop1();
+    // s.print();
 
-    s.push2(1000);
-    s.print();
+    // s.push2(1000);
+    // s.print();
 
-    s.pop1();
-    s.print();
+    // s.pop1();
+    // s.print();
     return 0;
 }

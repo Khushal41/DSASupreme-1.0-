@@ -1,10 +1,10 @@
 #include <iostream>
-#include <stack>
+#include <stack> // stack library
 using namespace std;
 int main()
 {
 
-    // Stack creation :-
+    // // Stack creation :-
     // stack<int> st;
 
     // // Insertion
@@ -14,13 +14,13 @@ int main()
     // st.push(40);
 
     // // Remove
-    // st.pop();
+    // st.pop(); // 40
 
     // // Cheak element on top
-    // cout << "Element ont top is:" << st.top() << endl;
+    // cout << "Element ont top is: " << st.top() << endl; // 30
 
     // // Cheak size
-    // cout << "Size of stack is:" << st.size() << endl;
+    // cout << "Size of stack is: " << st.size() << endl; // 3
 
     // // Cheak stack empty or not
     // if (st.empty())
@@ -32,6 +32,7 @@ int main()
     //     cout << "Stack is not empty" << endl;
     // }
 
+    // stack acccessing :-
     stack<int> s;
     s.push(10);
     s.push(20);
@@ -40,8 +41,8 @@ int main()
 
     while (!s.empty())
     {
-        cout << s.top() << " ";
-        s.pop();
+        cout << s.top() << " "; // top print
+        s.pop(); // and remove
     }
     cout << endl;
 

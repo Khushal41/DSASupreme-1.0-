@@ -5,11 +5,12 @@
 // public:
 //     int *arr;
 //     int top;
-//     int size;
-
+//     int size; //  array size
+//     // Constructor :-
 //     Stack(int size)
 //     {
-//         arr = new int[size];  // memonry allocate
+//         // memonry allocate
+//         arr = new int[size];
 //         this->size = size;
 //         top = -1;
 //     }
@@ -96,7 +97,6 @@
 
 #include <iostream>
 using namespace std;
-
 class Stack
 {
 public:
