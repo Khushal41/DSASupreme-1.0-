@@ -40,96 +40,9 @@ void reverseQueueRecursion(queue<int> &q) // by reference
     // step B :- reverse using recursion
     reverseQueueRecursion(q);
 
-    // step C :- pop kardya 
+    // step C :- pop kardya
     q.push(temp);
 }
-
-// void reverseK(queue<int> &q, int k)
-// {
-//     // StepA: queue ->k elements  -> stack
-
-//     stack<int> s;
-//     int count = 0;
-//     int n = q.size();
-
-//     if (k <= 0 || k > n)
-//         return;
-
-//     while (!q.empty())
-//     {
-//         int temp = q.front();
-//         q.pop();
-//         s.push(temp);
-//         count++;
-
-//         if (count == k)
-//             break;
-//     }
-
-//     // stepB: stack -> q me qapas
-//     while (!s.empty())
-//     {
-//         int temp = s.top();
-//         s.pop();
-//         q.push(temp);
-//     }
-
-//     // step C: push n-k element from q front to back
-//     count = 0;
-//     while (!q.empty() && n - k != 0)
-//     {
-//         int temp = q.front();
-//         q.pop();
-//         q.push(temp);
-//         count++;
-
-//         if (count == n - k)
-//             break;
-//     }
-// }
-
-// void interleaveQueue(queue<int> &q)
-// {
-//     // Step A: separate both halves
-//     int n = q.size();
-//     if (q.empty())
-//         return;
-//     int k = n / 2;
-//     int count = 0;
-//     queue<int> q2;
-
-//     while (!q.empty())
-//     {
-//         int temp = q.front();
-//         q.pop();
-//         q2.push(temp);
-//         count++;
-
-//         if (count == k)
-//             break;
-//     }
-
-//     // stepB: interleaving start krdo
-//     while (!q.empty() && !q2.empty())
-//     {
-//         int first = q2.front();
-//         q2.pop();
-
-//         q.push(first);
-
-//         int second = q.front();
-//         q.pop();
-
-//         q.push(second);
-//     }
-//     // odd wala case
-//     if (n & 1)
-//     {
-//         int element = q.front();
-//         q.pop();
-//         q.push(element);
-//     }
-// }
 
 int main()
 {
@@ -147,10 +60,6 @@ int main()
     // reverseQueue(q);
 
     //   reverseQueueRecursion(q);
-
-    // reverseK(q, 3);
-
-    // interleaveQueue(q);
 
     cout << "printing Queue after reversing recursively" << endl;
     while (!q.empty())
