@@ -1,3 +1,4 @@
+// Kth Smallest Number [230 Leetcode]
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -9,44 +10,34 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    int kthSmallest(TreeNode* root, int &k) {
-        
-        //base case
-        if(root == NULL) {
+    int kthSmallest(TreeNode *root, int &k)
+    {
+
+        // base case
+        if (root == NULL)
+        {
             //-1 reflects base condition reached
             return -1;
         }
 
-        //INorder
-
-        //left
-        int leftAns = kthSmallest(root->left,k);
-
-        if(leftAns != -1)
+        // Imorder Traversal
+        // left
+        int leftAns = kthSmallest(root->left, k);
+        if (leftAns != -1)
             return leftAns;
 
-        //N -> root
+        // N -> root
         k--;
-        if(k == 0)  {
+        if (k == 0)
+        {
             return root->val;
         }
 
-        //right
+        // Right
         int rightAns = kthSmallest(root->right, k);
         return rightAns;
-
     }
-
-
-
-
-
-
-
-
-
-
-
 };

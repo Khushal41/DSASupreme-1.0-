@@ -1,3 +1,4 @@
+// # 2 sum
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -9,48 +10,40 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-
-    void storeInorder(TreeNode* root, vector<int> &inorder) {
-        if(root == NULL) 
+    void storeInorder(TreeNode *root, vector<int> &inorder)
+    {
+        if (root == NULL)
             return;
         storeInorder(root->left, inorder);
         inorder.push_back(root->val);
         storeInorder(root->right, inorder);
     }
 
+    bool findTarget(TreeNode *root, int k)
+    {
 
-    bool findTarget(TreeNode* root, int k) {
-
-        vector<int> inorder;
+        vector<int> inorder; // inorder store
         storeInorder(root, inorder);
-
 
         int s = 0;
         int e = inorder.size() - 1;
 
-        while(s < e) {
+        while (s < e)
+        {
             int sum = inorder[s] + inorder[e];
 
-            if(sum == k )
+            if (sum == k)
                 return true;
-            
-            if(sum > k) 
+
+            if (sum > k)
                 e--;
             else
                 s++;
         }
 
-    return false;
-
-
-
-
-
-
-
-
-        
+        return false;
     }
 };

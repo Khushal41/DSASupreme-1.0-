@@ -15,16 +15,16 @@ public:
         //base case
         if(root == NULL)
             return NULL;
-        //case 1
+        //case 1 :- p and q is less than root data
         if(p->val < root->val && q->val < root->val) {
             return lowestCommonAncestor(root->left, p, q);
         }
-        //case 2
+        // case 2 :- p and q is grater than root data
         else if(p->val > root->val && q->val > root->val) {
             return lowestCommonAncestor(root->right, p,q);
         }
 
-        //case 3
+        // case 3 :- 
         else if(p->val < root->val && q->val > root->val) {
             return root;
         }
