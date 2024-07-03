@@ -34,6 +34,7 @@ public:
         int k = nums.size();
         for (int i = 0; i < k; i++)
         {
+            // Insert first element of list
             int element = nums[i][0];
             maxi = max(maxi, element);
             mini = min(mini, element);
@@ -44,7 +45,7 @@ public:
         int ansEnd = maxi;
 
         while (!minHeap.empty())
-        {
+        { 
 
             node *top = minHeap.top();
             int topelement = top->data;
