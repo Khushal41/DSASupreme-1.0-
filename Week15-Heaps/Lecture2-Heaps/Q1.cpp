@@ -13,17 +13,17 @@ int main()
         pq.push(4);
         pq.push(8);
 
-        cout << "top element: " << pq.top() << endl;
+        cout << "top element: " << pq.top() << endl; // 9
         pq.pop();
-        cout << "top element: " << pq.top() << endl;
+        cout << "top element: " << pq.top() << endl; // 8
         pq.pop();
-        cout << "top element: " << pq.top() << endl;
+        cout << "top element: " << pq.top() << endl; // 6
         pq.pop();
-        cout << "top element: " << pq.top() << endl;
+        cout << "top element: " << pq.top() << endl; // 4
         pq.pop();
-        cout << "top element: " << pq.top() << endl;
+        cout << "top element: " << pq.top() << endl; // 3
         pq.pop();
-        cout << "Size: " << pq.size() << endl;
+        cout << "Size: " << pq.size() << endl; // 0
         if (pq.empty())
         {
                 cout << "Max heap is empty" << endl;
@@ -32,6 +32,5 @@ int main()
         {
                 cout << "Max heap is not empty" << endl;
         }
-
         return 0;
 }

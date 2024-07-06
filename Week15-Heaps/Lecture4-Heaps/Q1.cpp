@@ -1,21 +1,27 @@
-class Solution {
+// # Leet-1962 Removes stonesto minimize the total
+class Solution
+{
 public:
-    int minStoneSum(vector<int>& piles, int k) {
+    int minStoneSum(vector<int> &piles, int k)
+    {
         priority_queue<int> maxHeap;
 
-        for(int i=0; i<piles.size(); i++) {
+        for (int i = 0; i < piles.size(); i++)
+        {
             maxHeap.push(piles[i]);
         }
 
-        while(k--) {
+        while (k--)
+        {
             int maxElement = maxHeap.top();
             maxHeap.pop();
-            maxElement = maxElement - floor(maxElement/2);
+            maxElement = maxElement - floor(maxElement / 2);
             maxHeap.push(maxElement);
         }
 
         int sum = 0;
-        while(!maxHeap.empty()) {
+        while (!maxHeap.empty())
+        {
             int temp = maxHeap.top();
             maxHeap.pop();
             sum += temp;
