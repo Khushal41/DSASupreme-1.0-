@@ -1,6 +1,6 @@
+// # Insert And Delete Element In Heap :-
 #include <iostream>
 using namespace std;
-
 class Heap
 {
 public:
@@ -86,9 +86,10 @@ public:
 
 int main()
 {
-        Heap h;
+        Heap h; // heap object
 
         // Manually insert some elements into the heap for testing
+        h.arr[0] = -1;
         h.arr[1] = 100;
         h.arr[2] = 50;
         h.arr[3] = 60;
