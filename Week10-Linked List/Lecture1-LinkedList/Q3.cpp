@@ -200,12 +200,12 @@ int main()
     cout << "head :" << head->data << endl;
     cout << "tail :" << tail->data << endl;
 
-    inserAtPosition(106, 0, head, tail);
-    cout << "Printing after insert at position call" << endl;
-    print(head);
-    cout << endl;
-    cout << "head :" << head->data << endl;
-    cout << "tail :" << tail->data << endl;
+    // inserAtPosition(106, 0, head, tail);
+    // cout << "Printing after insert at position call" << endl;
+    // print(head);
+    // cout << endl;
+    // cout << "head :" << head->data << endl;
+    // cout << "tail :" << tail->data << endl;
 
     // deleteNode(1, head, tail);
     // cout << endl;
