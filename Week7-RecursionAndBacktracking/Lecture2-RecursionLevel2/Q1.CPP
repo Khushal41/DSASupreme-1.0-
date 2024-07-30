@@ -1,4 +1,4 @@
-// WAP to find climb stairs
+// WAP to find climb stairs [ Leet-> 70 ]
 #include <iostream>
 using namespace std;
 int climbStairs(int n)
@@ -9,7 +9,7 @@ int climbStairs(int n)
     // Recursive Relation
     return climbStairs(n - 1) + climbStairs(n - 2);
 }
-int main() 
+int main()
 {
     int n;
     cout << "Enter n :" << endl;

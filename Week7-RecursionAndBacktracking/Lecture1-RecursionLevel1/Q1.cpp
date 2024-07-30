@@ -3,8 +3,9 @@
 using namespace std;
 int factorial(int n)
 {
-    // Base Case :- Ruk na kab he 
-    if(n == 1){
+    // Base Case :- Ruk na kab he
+    if (n == 1)
+    {
         return 1;
     }
     // Recursive Relation

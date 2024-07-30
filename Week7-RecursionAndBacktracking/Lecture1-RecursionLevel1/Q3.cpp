@@ -28,4 +28,4 @@ int main()
     cout << n << " ith term is " << ans << endl;
 
     return 0;
-} 
+}

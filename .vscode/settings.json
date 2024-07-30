@@ -6,6 +6,8 @@
     "forward_list": "cpp",
     "list": "cpp",
     "array": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "random": "cpp",
+    "limits": "cpp"
   }
 }
