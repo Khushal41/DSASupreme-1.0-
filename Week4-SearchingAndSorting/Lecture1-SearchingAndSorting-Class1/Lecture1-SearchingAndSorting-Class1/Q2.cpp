@@ -1,4 +1,4 @@
-// WAP to find element found in array using binarySearch
+// WAP to find element found in array using binary Search
 #include <iostream>
 #include <algorithm> //standard function binary search 
 #include <vector>

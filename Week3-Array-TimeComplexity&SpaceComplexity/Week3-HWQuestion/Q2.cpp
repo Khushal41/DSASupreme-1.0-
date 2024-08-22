@@ -1,4 +1,4 @@
-// Move all negative number to left  side of array
+ // Move all negative number to left  side of array
 //Solving using 2 pointer approch
 #include <bits/stdc++.h>
 using namespace std;

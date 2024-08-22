@@ -21,17 +21,19 @@ void findMissing(int *a, int n)
         int index = a[i] - 1;
         if (a[i] != a[index])
         {
-            swap(a[i], a[index])
+            swap(a[i], a[index]);
         }
         else
         {
             ++i;
         }
     }
+    
     // for (int i = 0; i < n; i++)
     // {
     //     cout << a[i] << " ";
     // }
+
     for (int i = 0; i < n; i++)
     {
         if (a[i] != a[i + 1])
