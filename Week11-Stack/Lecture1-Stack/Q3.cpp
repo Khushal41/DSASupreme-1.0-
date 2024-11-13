@@ -1,4 +1,4 @@
-// two stack in an array 
+// two stack in an array
 #include <iostream>
 using namespace std;
 

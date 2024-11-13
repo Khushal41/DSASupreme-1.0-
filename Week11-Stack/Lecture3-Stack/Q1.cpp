@@ -1,4 +1,4 @@
-// Min stack [Leetcode-155]
+  // Min stack [Leetcode-155]
 class MinStack
 {
 public:
